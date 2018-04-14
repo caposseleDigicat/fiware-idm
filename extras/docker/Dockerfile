@@ -21,12 +21,13 @@ RUN sudo npm cache clean -f && \
 	sudo n stable
 
 # Download latest version of the code and install npm dependencies
-RUN git clone https://github.com/ging/fiware-idm.git && \
+RUN git clone https://github.com/caposseleDigicat/fiware-idm.git && \
 	cd fiware-idm && \
 	npm install
 
 # Run PEP Proxy
 WORKDIR /opt/fiware-idm
+RUN cp config.js.template /opt/fiware-idm/config.js
 
 # Run application
 COPY docker-entrypoint.sh /opt/fiware-idm/docker-entrypoint.sh

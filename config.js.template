@@ -44,7 +44,7 @@ config.authzforce = {
 	port: 8080
 }
 
-var database_host = (process.env.DATABASE_HOST) ? process.env.DATABASE_HOST : 'localhost'
+var database_host = (process.env.DATABASE_HOST) ? process.env.DATABASE_HOST : 'mysql'
 
 // Database info
 config.database = {
